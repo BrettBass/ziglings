@@ -27,10 +27,12 @@ pub fn main() void {
     const num1_pointer: *u8 = &num1;
 
     var num2: u8 = undefined;
+    const num2_pointer: *u8 = &num2;
 
     // Please make num2 equal 5 using num1_pointer!
     // (See the "cheatsheet" above for ideas.)
-    num2 = ???;
+    //num2 = ???;
+    num2_pointer.* = num1_pointer.*;
 
     std.debug.print("num1: {}, num2: {}\n", .{ num1, num2 });
 }
